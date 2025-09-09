@@ -1,10 +1,22 @@
 import math
+<<<<<<< HEAD
 import torch
 from torchvision import transforms
 from PIL import Image
 
 sr_path=r"SRCNN_HR_image.png"
 hr_path=r"Original_image.png"
+=======
+import os
+import torch
+from torchvision import transforms
+from PIL import Image
+import config
+
+DEFAULT_RESULTS_DIR = os.path.join("image_res", "results")
+sr_path = os.path.join(DEFAULT_RESULTS_DIR, "SRCNN_HR_image.png")
+hr_path = os.path.join(DEFAULT_RESULTS_DIR, "Original_image.png")
+>>>>>>> c2bcc45 (Initial commit)
 def psnr_from_files(sr_path, hr_path):
 
     sr_img = Image.open(sr_path).convert("L")
@@ -34,8 +46,11 @@ def psnr_from_files(sr_path, hr_path):
 
 
 
+<<<<<<< HEAD
 sr_path = r"SRCNN_HR_image.png"
 hr_path = r"Original_image.png"
 
+=======
+>>>>>>> c2bcc45 (Initial commit)
 psnr_val, evaluation = psnr_from_files(sr_path, hr_path)
 print(f"PSNR: {psnr_val:.2f} dB, Evaluation: {evaluation}")

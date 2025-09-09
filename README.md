@@ -8,9 +8,12 @@ PyTorch implementation of single-image super-resolution using SRCNN with an opti
 - **Training script** with loss logging and checkpoint saving
 - **Inference script** to generate and visualize results
 
+<<<<<<< HEAD
 
   <img width="584" height="257" alt="image" src="https://github.com/user-attachments/assets/cfbc4ff7-b8dd-4463-9a57-568eb136af21" />
 
+=======
+>>>>>>> c2bcc45 (Initial commit)
 ---
 
 ## Project structure
@@ -123,3 +126,9 @@ Also opens a side-by-side visualization window.
 - Ledig et al., Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network, CVPR 2017 (SRGAN inspiration)
 
 ---
+<<<<<<< HEAD
+=======
+
+## License
+This repository is for research and educational purposes. Check the licenses of datasets and third-party models you use (e.g., VGG19 weights, CelebA-HQ-256).
+>>>>>>> c2bcc45 (Initial commit)
