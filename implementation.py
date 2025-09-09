@@ -5,6 +5,10 @@ from PIL import Image
 import matplotlib.pyplot as plt
 
 from model import SRCNN
+<<<<<<< HEAD
+=======
+import config
+>>>>>>> c2bcc45 (Initial commit)
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -14,8 +18,15 @@ model.load_state_dict(torch.load("srcnn_model.pth", map_location=device))
 model.to(device)
 model.eval()  # מצב חיזוי
 
+<<<<<<< HEAD
 H_img = Image.open(r"normal_resolution_images\000.png").convert("L")
 L_img = Image.open(r"low_resolution_images\000.png").convert("L")
+=======
+hr_path = os.path.join(config.HR_dir, "000.png")
+lr_path = os.path.join(config.LR_dir, "000.png")
+H_img = Image.open(hr_path).convert("L")
+L_img = Image.open(lr_path).convert("L")
+>>>>>>> c2bcc45 (Initial commit)
 
 transform = transforms.ToTensor()
 input_tensor = transform(L_img).unsqueeze(0).to(device)  # 1x1xHxW
@@ -26,7 +37,11 @@ with torch.no_grad():
 
 sr_img = transforms.ToPILImage()(sr.squeeze().cpu())
 
+<<<<<<< HEAD
 output_dir = r"image_res\results"
+=======
+output_dir = os.path.join("image_res", "results")
+>>>>>>> c2bcc45 (Initial commit)
 os.makedirs(output_dir, exist_ok=True)
 
 L_img.save(os.path.join(output_dir, "LR_image.png"))
