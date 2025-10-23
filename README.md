@@ -124,11 +124,3 @@ Also opens a side-by-side visualization window.
 ## References
 - Dong et al., Learning a Deep Convolutional Network for Image Super-Resolution, ECCV 2014 (SRCNN)
 - Ledig et al., Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network, CVPR 2017 (SRGAN inspiration)
-
----
-<<<<<<< HEAD
-=======
-
-## License
-This repository is for research and educational purposes. Check the licenses of datasets and third-party models you use (e.g., VGG19 weights, CelebA-HQ-256).
->>>>>>> c2bcc45 (Initial commit)
